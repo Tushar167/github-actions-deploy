@@ -14,6 +14,10 @@ def read_root():
 def trial_api():
     return {"message": "This is a trial API endpoint"}
 
-@app.gert("/someApi")
+@app.get("/someApi")
 def some_api():
     return {"info": "This is some API endpoint"}
+
+@app.get("/hereApi")
+def here_api():
+    return {"detail": "This is here API endpoint"}
