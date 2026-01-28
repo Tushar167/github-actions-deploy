@@ -8,4 +8,4 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"data": "this is a sample fastapi application"}
+    return {"data": "i am trying out a ci cd pipeline"}
