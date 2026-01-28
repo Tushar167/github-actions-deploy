@@ -3,10 +3,10 @@ name: Deploy FastAPI Application
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   deploy:
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout-code
@@ -16,7 +16,7 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
-          username: root
+          username: tusharanumula
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/tusharanumula/github-actions-deploy
