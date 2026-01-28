@@ -9,3 +9,7 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     return {"data": "i am trying out a ci cd pipeline"}
+
+@app.get("/trialApi")
+def trial_api():
+    return {"message": "This is a trial API endpoint"}
